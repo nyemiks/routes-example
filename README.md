@@ -1,7 +1,10 @@
 # routes-example
 
-A [re-frame](https://github.com/day8/re-frame) application designed to ... well, that part is up to
-you.
+A [re-frame](https://github.com/day8/re-frame) application designed to implement routing using bidi and pushy libraries.
+This example is based on the youtube video titled "clojurescript re-frame routing tutorial"
+
+https://youtu.be/wFmsIZMZLNk?si=jU-L3efdwdhKU5_m
+
 
 ## Getting Started
 
