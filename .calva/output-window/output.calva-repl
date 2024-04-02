@@ -1,0 +1,2090 @@
+; This is the Calva REPL Window.
+; It's just a file, really, with some special treatment from Calva.
+; Use it as a REPL input prompt if you like. (When the REPL is connected.)
+; TIPS: The keyboard shortcut `ctrl+alt+o r` shows and focuses this window
+; Please see https://calva.io/repl-window/ for more info.
+; Happy coding! ♥️
+
+; TIPS: As with any Clojure file when the REPL is connected:
+; - `alt+enter` evaluates the current top level form.
+; - `ctrl+enter` evaluates the current form.
+; Special for this file:
+; - `alt+up` and `alt+down` traverse up and down the REPL command history
+;    when the cursor is after the last contents at the prompt
+
+PLEASE NOTE
+We will update the default location of this file. 
+The new default location will be 
+  "<projectRootPath>/.calva/repl.calva-repl"
+For now the legacy path is used by default.
+To give yourself a smooth transition, you can opt in
+to the change, by configuring this setting as false: 
+  "calva.useLegacyReplWindowPath"
+and then add "**/.calva/repl.calva-repl" to your ".gitignore" file.
+
+
+This file is configured as the output destination for all REPL output.
+You can configure this with the setting:
+  "calva.outputDestinations"
+
+
+; Jacking in...
+; Connecting using "shadow-cljs" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: pushd c:\Users\nyemi\Documents\clojure\routing\routes-example & npx.cmd shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app & popd
+; Using host:port localhost:8777 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉shadow.user꞉> 
+; Creating cljs repl session...
+; Connecting cljs repl: shadow-cljs...
+; Please start your ClojureScript app (load it in the browser, or whatever is appropriate) so that Calva can connect to its REPL...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Connected session: cljs, repl: :app
+; TIPS: You can choose which REPL to use (clj or cljs):
+;    *Calva: Toggle REPL connection*
+;    (There is a button in the status bar for this)
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.cljs'
+nil
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 2 compiled, 0 warnings, 0.96s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 2 compiled, 0 warnings, 0.69s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 2 compiled, 0 warnings, 0.72s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 2 compiled, 0 warnings, 0.54s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 2 compiled, 0 warnings, 0.56s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\db.cljs:5:17
+; --------------------------------------------------------------------------------
+;    2 | 
+;    3 | (def default-db
+;    4 |   {:name "re-frame"
+;    5 |    :users [{:id} {}]
+; -----------------------^--------------------------------------------------------
+; routes_example/db.cljs [line 5, col 17] The map literal starting with :id on line 5 column 12 contains 1 form(s). Map literals must contain an even number of forms.
+; 
+; --------------------------------------------------------------------------------
+;    6 |    }
+;    7 |   )
+;    8 | 
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\db.cljs:5:20
+; --------------------------------------------------------------------------------
+;    2 | 
+;    3 | (def default-db
+;    4 |   {:name "re-frame"
+;    5 |    :users [{:id 1 :} {}]
+; --------------------------^-----------------------------------------------------
+; routes_example/db.cljs [line 5, col 20] Invalid keyword: :.
+; 
+; --------------------------------------------------------------------------------
+;    6 |    }
+;    7 |   )
+;    8 | 
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 1 compiled, 0 warnings, 0.36s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 2 compiled, 0 warnings, 0.64s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 2 compiled, 0 warnings, 0.60s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 2 compiled, 0 warnings, 0.67s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\db.cljs:5:52
+; --------------------------------------------------------------------------------
+;    2 | 
+;    3 | (def default-db
+;    4 |   {:name "re-frame"
+;    5 |    :users [{:id 1 :name "on the code again"} {:id }]
+; ----------------------------------------------------------^---------------------
+; routes_example/db.cljs [line 5, col 52] The map literal starting with :id on line 5 column 46 contains 1 form(s). Map literals must contain an even number of forms.
+; 
+; --------------------------------------------------------------------------------
+;    6 |    }
+;    7 |   )
+;    8 | 
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\db.cljs:5:54
+; --------------------------------------------------------------------------------
+;    2 | 
+;    3 | (def default-db
+;    4 |   {:name "re-frame"
+;    5 |    :users [{:id 1 :name "on the code again"} {:id 2 :}]
+; ------------------------------------------------------------^-------------------
+; routes_example/db.cljs [line 5, col 54] Invalid keyword: :.
+; 
+; --------------------------------------------------------------------------------
+;    6 |    }
+;    7 |   )
+;    8 | 
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 1 compiled, 0 warnings, 0.29s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 2 compiled, 0 warnings, 0.76s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 2 compiled, 0 warnings, 0.69s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 2 compiled, 0 warnings, 0.49s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 2 compiled, 0 warnings, 0.41s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.61s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.65s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:16:12
+; --------------------------------------------------------------------------------
+;   13 |     ["/" {""      :home
+;   14 |           "about" :about
+;   15 |           ""
+;   16 |           }]))
+; ------------------^-------------------------------------------------------------
+; routes_example/routes.cljs [line 16, col 12] The map literal starting with "" on line 13 column 10 contains 5 form(s). Map literals must contain an even number of forms.
+; 
+; --------------------------------------------------------------------------------
+;   17 | 
+;   18 | (defn parse
+;   19 |   [url]
+;   20 |   (bidi/match-route @routes url))
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:16:12
+; --------------------------------------------------------------------------------
+;   13 |     ["/" {""      :home
+;   14 |           "about" :about
+;   15 |           "users"
+;   16 |           }]))
+; ------------------^-------------------------------------------------------------
+; routes_example/routes.cljs [line 16, col 12] The map literal starting with "" on line 13 column 10 contains 5 form(s). Map literals must contain an even number of forms.
+; 
+; --------------------------------------------------------------------------------
+;   17 | 
+;   18 | (defn parse
+;   19 |   [url]
+;   20 |   (bidi/match-route @routes url))
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 1 compiled, 0 warnings, 0.49s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.65s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.49s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.44s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.50s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 1 warnings, 0.58s)
+; 
+; 
+; 
+; ------ WARNING #1 - :undeclared-var --------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:39:31
+; 
+; --------------------------------------------------------------------------------
+; 
+;   36 |     (re-frame/dispatch [::events/set-active-panel panel])))
+;   37 | 
+;   38 | 
+; 
+;   39 | (keyword (str (name (:handler route)) "-panel"))
+; 
+; -------------------------------------^------------------------------------------
+; 
+;  Use of undeclared Var routes-example.routes/route
+; 
+; --------------------------------------------------------------------------------
+; 
+;   40 | 
+;   41 | (defonce history
+;   42 |   (pushy/pushy dispatch parse))
+;   43 | 
+; 
+; --------------------------------------------------------------------------------
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.48s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.63s)
+:repl/exception!
+; 
+; 
+; Execution error (Error) at (<cljs repl>:1).
+; Doesn't support name: 
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.61s)
+:repl/exception!
+; 
+; 
+; Execution error (Error) at (<cljs repl>:1).
+; Doesn't support name: 
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.47s)
+:repl/exception!
+; 
+; 
+; Execution error (Error) at (<cljs repl>:1).
+; Doesn't support name: {:handler :about}
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.52s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.54s)
+:about-panel
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.45s)
+:home-panel
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.68s)
+:users-index-panel
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.65s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.42s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.76s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 3 compiled, 0 warnings, 0.72s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (487 files, 1 compiled, 0 warnings, 0.32s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (489 files, 3 compiled, 0 warnings, 0.40s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (489 files, 4 compiled, 0 warnings, 0.47s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (489 files, 4 compiled, 0 warnings, 0.52s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:15:23
+; --------------------------------------------------------------------------------
+;   12 |   (atom
+;   13 |     ["/" {""      :home
+;   14 |           "about" :about
+;   15 |           "users" {""}
+; -----------------------------^--------------------------------------------------
+; routes_example/routes.cljs [line 15, col 23] The map literal starting with "" on line 15 column 19 contains 1 form(s). Map literals must contain an even number of forms.
+; 
+; --------------------------------------------------------------------------------
+;   16 | 
+;   17 |           }
+;   18 |      ]
+;   19 |    )
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:15:24
+; --------------------------------------------------------------------------------
+;   12 |   (atom
+;   13 |     ["/" {""      :home
+;   14 |           "about" :about
+;   15 |           "users" {"" }
+; ------------------------------^-------------------------------------------------
+; routes_example/routes.cljs [line 15, col 24] The map literal starting with "" on line 15 column 19 contains 1 form(s). Map literals must contain an even number of forms.
+; 
+; --------------------------------------------------------------------------------
+;   16 | 
+;   17 |           }
+;   18 |      ]
+;   19 |    )
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (489 files, 1 compiled, 0 warnings, 0.53s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (489 files, 4 compiled, 0 warnings, 0.56s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (489 files, 4 compiled, 0 warnings, 0.58s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (489 files, 4 compiled, 0 warnings, 0.56s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:18:21
+; --------------------------------------------------------------------------------
+;   15 |           "users" {
+;   16 |                    "" :users-index
+;   17 |                    "/"
+;   18 |                    }
+; ---------------------------^----------------------------------------------------
+; routes_example/routes.cljs [line 18, col 21] The map literal starting with "" on line 15 column 19 contains 3 form(s). Map literals must contain an even number of forms.
+; 
+; --------------------------------------------------------------------------------
+;   19 | 
+;   20 |           }
+;   21 |      ]
+;   22 |    )
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:18:21
+; --------------------------------------------------------------------------------
+;   15 |           "users" {
+;   16 |                    "" :users-index
+;   17 |                    "/" 
+;   18 |                    }
+; ---------------------------^----------------------------------------------------
+; routes_example/routes.cljs [line 18, col 21] The map literal starting with "" on line 15 column 19 contains 3 form(s). Map literals must contain an even number of forms.
+; 
+; --------------------------------------------------------------------------------
+;   19 | 
+;   20 |           }
+;   21 |      ]
+;   22 |    )
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:18:21
+; --------------------------------------------------------------------------------
+;   15 |           "users" {
+;   16 |                    "" :users-index
+;   17 |                    ["/"] 
+;   18 |                    }
+; ---------------------------^----------------------------------------------------
+; routes_example/routes.cljs [line 18, col 21] The map literal starting with "" on line 15 column 19 contains 3 form(s). Map literals must contain an even number of forms.
+; 
+; --------------------------------------------------------------------------------
+;   19 | 
+;   20 |           }
+;   21 |      ]
+;   22 |    )
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:18:21
+; --------------------------------------------------------------------------------
+;   15 |           "users" {
+;   16 |                    "" :users-index
+;   17 |                    ["/" :id] 
+;   18 |                    }
+; ---------------------------^----------------------------------------------------
+; routes_example/routes.cljs [line 18, col 21] The map literal starting with "" on line 15 column 19 contains 3 form(s). Map literals must contain an even number of forms.
+; 
+; --------------------------------------------------------------------------------
+;   19 | 
+;   20 |           }
+;   21 |      ]
+;   22 |    )
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (489 files, 1 compiled, 0 warnings, 0.58s)
+{:handler :about}
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (489 files, 4 compiled, 0 warnings, 0.50s)
+{:handler :users-index}
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (489 files, 4 compiled, 0 warnings, 0.60s)
+{:route-params {:id "1"}, :handler :user-view}
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (489 files, 4 compiled, 0 warnings, 0.52s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (489 files, 4 compiled, 0 warnings, 1.04s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (489 files, 4 compiled, 0 warnings, 0.42s)
+:user-view-panel
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (489 files, 4 compiled, 0 warnings, 0.53s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\core.cljs:1:1
+; --------------------------------------------------------------------------------
+; 
+;    1 | (ns routes-example.core
+; -------^------------------------------------------------------------------------
+; null
+; Invalid namespace declaration
+; -- Syntax error -------------------
+; 
+;   (... ... (:require
+;             [reagent.dom :as rdom]
+;             [re-frame.core :as re-frame]
+;             [routes-example.events :as events]
+;             [routes-example.routes :as routes]
+;             [routes-example.views :as views]
+;             [routes-example.config :as config]
+;             [routes-example.users-index.views]
+;             []))
+;            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+; 
+; has extra input
+; 
+; -- Relevant specs -------
+; 
+; :shadow.build.ns-form/ns-form:
+;   (clojure.spec.alpha/cat
+;    :ns
+;    '#{clojure.core/ns}
+;    :name
+;    clojure.core/simple-symbol?
+;    :docs
+; tring
+;    (clojure.spec.alpha/? clojure.core/string?)
+;    :meta
+;    (clojure.spec.alpha/? clojure.core/map?)
+;    :clauses
+;    :shadow.build.ns-form/ns-clauses)
+; 
+; -------------------------
+; Detected 1 error
+; 
+; --------------------------------------------------------------------------------
+;    2 |   (:require
+;    3 |    [reagent.dom :as rdom]
+;    4 |    [re-frame.core :as re-frame]
+;    5 |    [routes-example.events :as events]
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 3 compiled, 0 warnings, 1.13s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.57s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.41s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_views\views.cljs:13:46
+; --------------------------------------------------------------------------------
+;   10 | (defn user-view []
+;   11 |   (let 
+;   12 |        [
+;   13 |         user @(re-frame/subscribe [::user/sub 1])
+; ----------------------------------------------------^---------------------------
+; routes_example/users_views/views.cljs [line 13, col 46] Invalid keyword: ::user/sub.
+; 
+; --------------------------------------------------------------------------------
+;   14 |         ]
+;   15 |         [:div (str "The selected user is ") (:name user)]
+;   16 |     )
+;   17 |   )
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_views\views.cljs:13:47
+; --------------------------------------------------------------------------------
+;   10 | (defn user-view []
+;   11 |   (let 
+;   12 |        [
+;   13 |         user @(re-frame/subscribe [::user/subs 1])
+; -----------------------------------------------------^--------------------------
+; routes_example/users_views/views.cljs [line 13, col 47] Invalid keyword: ::user/subs.
+; 
+; --------------------------------------------------------------------------------
+;   14 |         ]
+;   15 |         [:div (str "The selected user is ") (:name user)]
+;   16 |     )
+;   17 |   )
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_views\views.cljs:13:43
+; --------------------------------------------------------------------------------
+;   10 | (defn user-view []
+;   11 |   (let 
+;   12 |        [
+;   13 |         user @(re-frame/subscribe [::/subs 1])
+; -------------------------------------------------^------------------------------
+; routes_example/users_views/views.cljs [line 13, col 43] Invalid keyword: ::/subs.
+; 
+; --------------------------------------------------------------------------------
+;   14 |         ]
+;   15 |         [:div (str "The selected user is ") (:name user)]
+;   16 |     )
+;   17 |   )
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 1 compiled, 0 warnings, 0.43s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.33s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.36s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.34s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.43s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.32s)
+#'routes-example.routes/parse
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.66s)
+{:route-params {:id "1"}, :handler :user-view}
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 1.12s)
+{:handler :users-index}
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.43s)
+{:route-params {:id "2"}, :handler :user-view}
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.89s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.72s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.58s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.60s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.57s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.74s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.43s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.57s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.47s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 4 compiled, 0 warnings, 0.66s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 4 compiled, 0 warnings, 0.43s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 4 compiled, 1 warnings, 0.81s)
+; 
+; 
+; 
+; ------ WARNING #1 - :undeclared-var --------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\events.cljs:28:33
+; 
+; --------------------------------------------------------------------------------
+; 
+;   25 | (re-frame/reg-event-fx
+;   26 |  ::set-route
+;   27 |  (fn-traced [{:keys [db]} [_ route]]
+; 
+;   28 |    {:db (assoc db :active-panel active-panel)}))
+; 
+; ---------------------------------------^----------------------------------------
+; 
+;  Use of undeclared Var routes-example.events/active-panel
+; 
+; --------------------------------------------------------------------------------
+; 
+;   29 | 
+; 
+; --------------------------------------------------------------------------------
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 4 compiled, 1 warnings, 0.51s)
+; 
+; 
+; 
+; ------ WARNING #1 - :undeclared-var --------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\events.cljs:28:26
+; 
+; --------------------------------------------------------------------------------
+; 
+;   25 | (re-frame/reg-event-fx
+;   26 |  ::set-route
+;   27 |  (fn-traced [{:keys [db]} [_ route]]
+; 
+;   28 |    {:db (assoc db :route active-panel)}))
+; 
+; --------------------------------^-----------------------------------------------
+; 
+;  Use of undeclared Var routes-example.events/active-panel
+; 
+; --------------------------------------------------------------------------------
+; 
+;   29 | 
+; 
+; --------------------------------------------------------------------------------
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 4 compiled, 0 warnings, 0.87s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.33s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.37s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.43s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.36s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.49s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.38s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.61s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 1 warnings, 0.40s)
+; 
+; 
+; 
+; ------ WARNING #1 - :fn-arity --------------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\subs.cljs:23:4
+; 
+; --------------------------------------------------------------------------------
+; 
+;   20 | (re-frame/reg-sub
+;   21 |  ::active-panel
+;   22 |  (fn [db _]
+; 
+;   23 |    (get)
+; 
+; ----------^---------------------------------------------------------------------
+; 
+;  Wrong number of args (0) passed to cljs.core/get
+; 
+; --------------------------------------------------------------------------------
+; 
+;   24 |    )
+;   25 |  )
+; 
+; --------------------------------------------------------------------------------
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 1 warnings, 0.32s)
+; 
+; 
+; 
+; ------ WARNING #1 - :fn-arity --------------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\subs.cljs:23:4
+; 
+; --------------------------------------------------------------------------------
+; 
+;   20 | (re-frame/reg-sub
+;   21 |  ::active-panel
+;   22 |  (fn [db _]
+; 
+;   23 |    (get-in db )
+; 
+; ----------^---------------------------------------------------------------------
+; 
+;  Wrong number of args (1) passed to cljs.core/get-in
+; 
+; --------------------------------------------------------------------------------
+; 
+;   24 |    )
+;   25 |  )
+; 
+; --------------------------------------------------------------------------------
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.40s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.68s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\subs.cljs:23:24
+; --------------------------------------------------------------------------------
+;   20 | (re-frame/reg-sub
+;   21 |  ::active-panel
+;   22 |  (fn [db _]
+;   23 |    (get-in db [:route :])
+; ------------------------------^-------------------------------------------------
+; routes_example/subs.cljs [line 23, col 24] Invalid keyword: :.
+; 
+; --------------------------------------------------------------------------------
+;   24 |    )
+;   25 |  )
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 1 compiled, 0 warnings, 0.33s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.52s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.38s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.37s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.57s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.31s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.43s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.36s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.38s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.38s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.51s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_views\views.cljs:1:1
+; --------------------------------------------------------------------------------
+; 
+;    1 | (ns routes-example.users-views.views
+; -------^------------------------------------------------------------------------
+; null
+; Invalid namespace declaration
+; -- Syntax error -------------------
+; 
+;   (... ... (:require
+;             [re-frame.core :as re-frame]
+;             [routes-example.users-views.subs :as subs]
+;             [routes-example.routes :as routes]
+;             []))
+;            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+; 
+; has extra input
+; 
+; -- Relevant specs -------
+; 
+; :shadow.build.ns-form/ns-form:
+;   (clojure.spec.alpha/cat
+;    :ns
+;    '#{clojure.core/ns}
+;    :name
+;    clojure.core/simple-symbol?
+;    :docstring
+;    (clojure.spec.alpha/? clojure.core/string?)
+;    :meta
+;    (clojure.spec.alpha/? clojure.core/map?)
+;    :clauses
+;    :shadow.bui
+; ld.ns-form/ns-clauses)
+; 
+; -------------------------
+; Detected 1 error
+; 
+; --------------------------------------------------------------------------------
+;    2 |   (:require
+;    3 |    [re-frame.core :as re-frame]
+;    4 |    [routes-example.users-views.subs :as subs]
+;    5 |    [routes-example.routes :as routes]
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; The required namespace "rout" is not available, it was required by "routes_example/users_views/views.cljs".
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 1 compiled, 0 warnings, 0.68s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_views\views.cljs:1:1
+; --------------------------------------------------------------------------------
+; 
+;    1 | (ns routes-example.users-views.views
+; -------^------------------------------------------------------------------------
+; null
+; Invalid namespace declaration
+; -- Syntax error -------------------
+; 
+;   (... ... (:require
+;             [re-frame.core :as re-frame]
+;             [routes-example.users-views.subs :as subs]
+;             [routes-example.routes :as routes]
+;             [routes-example.subs :as]))
+;            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+; 
+; has extra input
+; 
+; -- Relevant specs -------
+; 
+; :shadow.build.ns-form/ns-form:
+;   (clojure.spec.alpha/cat
+;    :ns
+;    '#{clojure.core/ns}
+;    :name
+;    clojure.core/simple-symbol?
+;    :docstring
+;    (clojure.spec.alpha/? clojure.core/string?)
+;    :meta
+;    (clojure.spec.alpha/? clojure.core/map?)
+;    
+; :clauses
+;    :shadow.build.ns-form/ns-clauses)
+; 
+; -------------------------
+; Detected 1 error
+; 
+; --------------------------------------------------------------------------------
+;    2 |   (:require
+;    3 |    [re-frame.core :as re-frame]
+;    4 |    [routes-example.users-views.subs :as subs]
+;    5 |    [routes-example.routes :as routes]
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 1 compiled, 0 warnings, 0.58s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.45s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.45s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.69s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.50s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.38s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.42s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.49s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.48s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 1 warnings, 0.62s)
+; 
+; 
+; 
+; ------ WARNING #1 - :fn-arity --------------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_views\views.cljs:15:48
+; 
+; --------------------------------------------------------------------------------
+; 
+;   12 |   (let 
+;   13 |        [
+;   14 |           route-params @(re-frame/subscribe [::subs/route-params])
+; 
+;   15 |         user @(re-frame/subscribe [::subs/user (:id )])
+; 
+; ------------------------------------------------------^-------------------------
+; 
+;  Wrong number of args (0) passed to :id
+; 
+; --------------------------------------------------------------------------------
+; 
+;   16 |         ]
+;   17 |         [:div (str "The selected user is ") (:name user)]
+;   18 |     )
+;   19 |   )
+; 
+; --------------------------------------------------------------------------------
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 1 warnings, 0.39s)
+; 
+; 
+; 
+; ------ WARNING #1 - :undeclared-var --------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_views\views.cljs:15:53
+; 
+; --------------------------------------------------------------------------------
+; 
+;   12 |   (let 
+;   13 |        [
+;   14 |           route-params @(re-frame/subscribe [::subs/route-params])
+; 
+;   15 |         user @(re-frame/subscribe [::subs/user (:id route)])
+; 
+; -----------------------------------------------------------^--------------------
+; 
+;  Use of undeclared Var routes-example.users-views.views/route
+; 
+; --------------------------------------------------------------------------------
+; 
+;   16 |         ]
+;   17 |         [:div (str "The selected user is ") (:name user)]
+;   18 |     )
+;   19 |   )
+; 
+; --------------------------------------------------------------------------------
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.98s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.40s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.34s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.47s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.71s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_views\subs.cljs:10:25
+; --------------------------------------------------------------------------------
+;    7 |  ::user
+;    8 |  (fn [db [_ user-id]]
+;    9 |    (first (filter (fn [u]
+;   10 |              (= (:id u) (int ))
+; -------------------------------^------------------------------------------------
+; null
+; Wrong number of args (0) passed to: cljs.core/int
+; --------------------------------------------------------------------------------
+;   11 |              ) 
+;   12 |            (:users db)
+;   13 |            )
+;   14 |           )
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 0 compiled, 0 warnings, 0.33s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_views\subs.cljs:16:1
+; routes_example/users_views/subs.cljs [line 16, col 1] Unexpected EOF while reading item 3 of list, starting at line 6 and column 1.
+; 
+; --------------------------------------------------------------------------------
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 1 compiled, 0 warnings, 0.32s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.31s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.45s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.36s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.38s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\db.cljs:11:19
+; --------------------------------------------------------------------------------
+;    8 |   )
+;    9 | 
+;   10 | 
+;   11 | (fn [db  user-id]]
+; -------------------------^------------------------------------------------------
+; routes_example/db.cljs [line 11, col 19] Unmatched delimiter ].
+; 
+; --------------------------------------------------------------------------------
+;   12 |    (first (filter (fn [u]
+;   13 |              (= (:id u) (int user-id))
+;   14 |              ) 
+;   15 |            (:users default-db)
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 1 compiled, 0 warnings, 0.36s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 4 warnings, 0.43s)
+; 
+; 
+; 
+; ------ WARNING #1 - :undeclared-var --------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\db.cljs:11:2
+; 
+; --------------------------------------------------------------------------------
+; 
+;    8 |   )
+;    9 | 
+;   10 | 
+; 
+;   11 | (deffn [db  user-id]
+; 
+; --------^-----------------------------------------------------------------------
+; 
+;  Use of undeclared Var routes-example.db/deffn
+; 
+; --------------------------------------------------------------------------------
+; 
+;   12 |    (first (filter (fn [u]
+;   13 |              (= (:id u) (int user-id))
+;   14 |              ) 
+;   15 |            (:users default-db)
+; 
+; --------------------------------------------------------------------------------
+; 
+; 
+; 
+; ------ WARNING #2 - :undeclared-var --------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\db.cljs:11:9
+; 
+; --------------------------------------------------------------------------------
+; 
+;    8 |   )
+;    9 | 
+;   10 | 
+; 
+;   11 | (deffn [db  user-id]
+; 
+; ---------------^----------------------------------------------------------------
+; 
+;  Use of undeclared Var routes-example.db/db
+; 
+; --------------------------------------------------------------------------------
+; 
+;   12 |    (first (filter (fn [u]
+;   13 |              (= (:id u) (int user-id))
+;   14 |              ) 
+;   15 |            (:users default-db)
+; 
+; --------------------------------------------------------------------------------
+; 
+; 
+; 
+; ------ WARNING #3 - :undeclared-var --------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\db.cljs:11:13
+; 
+; --------------------------------------------------------------------------------
+; 
+;    8 |   )
+;    9 | 
+;   10 | 
+; 
+;   11 | (deffn [db  user-id]
+; 
+; -------------------^------------------------------------------------------------
+; 
+;  Use of undeclared Var routes-example.db/user-id
+; 
+; --------------------------------------------------------------------------------
+; 
+;   12 |    (first (filter (fn [u]
+;   13 |              (= (:id u) (int user-id))
+;   14 |              ) 
+;   15 |            (:users default-db)
+; 
+; --------------------------------------------------------------------------------
+; 
+; 
+; 
+; ------ WARNING #4 - :undeclared-var --------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\db.cljs:13:30
+; 
+; --------------------------------------------------------------------------------
+; 
+;   10 | 
+;   11 | (deffn [db  user-id]
+;   12 |    (first (filter (fn [u]
+; 
+;   13 |              (= (:id u) (int user-id))
+; 
+; ------------------------------------^-------------------------------------------
+; 
+;  Use of undeclared Var routes-example.db/user-id
+; 
+; --------------------------------------------------------------------------------
+; 
+;   14 |              ) 
+;   15 |            (:users default-db)
+;   16 |            )
+;   17 |           )
+; 
+; --------------------------------------------------------------------------------
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\db.cljs:11:1
+; --------------------------------------------------------------------------------
+;    8 |   )
+;    9 | 
+;   10 | 
+;   11 | (defn [db  user-id]
+; -------^------------------------------------------------------------------------
+; Syntax error macroexpanding cljs.core/defn.
+; Call to cljs.core/defn did not conform to spec.
+; -- Spec failed --------------------
+; 
+;   ([db user-id] ...)
+;    ^^^^^^^^^^^^
+; 
+; should satisfy
+; 
+;   simple-symbol?
+; 
+; -- Relevant specs -------
+; 
+; :shadow.cljs.devtools.cljs-specs/defn-args:
+;   (clojure.spec.alpha/cat
+;    :fn-name
+;    clojure.core/simple-symbol?
+;    :docstring
+;    (clojure.spec.alpha/? clojure.core/string?)
+;    :meta
+;    (clojure.spec.alpha/? clojure.core/map?)
+;    :fn-tail
+;    (clojure.spec.alpha/alt
+;     :arity-1
+;     :shadow.cljs.devtools.cljs-specs/params+body
+;     :arity-n
+;     (clojure.spec.alpha/cat
+;      :bodies
+;      (clojure.s
+; pec.alpha/+
+;       (clojure.spec.alpha/spec
+;        :shadow.cljs.devtools.cljs-specs/params+body))
+;      :attr-map
+;      (clojure.spec.alpha/? clojure.core/map?))))
+; 
+; -------------------------
+; Detected 1 error
+; 
+; --------------------------------------------------------------------------------
+;   12 |    (first (filter (fn [u]
+;   13 |              (= (:id u) (int user-id))
+;   14 |              ) 
+;   15 |            (:users default-db)
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 1 compiled, 1 warnings, 0.35s)
+; 
+; 
+; 
+; ------ WARNING #1 - :redef -----------------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\db.cljs:11:1
+; 
+; --------------------------------------------------------------------------------
+; 
+;    8 |   )
+;    9 | 
+;   10 | 
+; 
+;   11 | (defn get[db  user-id]
+; 
+; -------^------------------------------------------------------------------------
+; 
+;  get already refers to: cljs.core/get being replaced by: routes-example.db/get
+; 
+; --------------------------------------------------------------------------------
+; 
+;   12 |    (first (filter (fn [u]
+;   13 |              (= (:id u) (int user-id))
+;   14 |              ) 
+;   15 |            (:users default-db)
+; 
+; --------------------------------------------------------------------------------
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.52s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.49s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.40s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.46s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.48s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 1 warnings, 0.44s)
+; 
+; 
+; 
+; ------ WARNING #1 - :fn-arity --------------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\db.cljs:20:1
+; 
+; --------------------------------------------------------------------------------
+; 
+;   17 |           )
+;   18 |    )
+;   19 | 
+; 
+;   20 | (get-user-id )
+; 
+; -------^------------------------------------------------------------------------
+; 
+;  Wrong number of args (0) passed to routes-example.db/get-user-id
+; 
+; --------------------------------------------------------------------------------
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.40s)
+{:id 2, :name "Gareth Cliff"}
+cljs꞉routes-example.db꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.40s)
+{:id 1, :name "on the code again"}
+cljs꞉routes-example.db꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.41s)
+{:id 2, :name "Gareth Cliff"}
+cljs꞉routes-example.db꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.39s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.46s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.41s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.33s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.42s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.49s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.47s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.45s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.59s)
+{:route-params {:id "2"}, :handler :user-view}
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.48s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 3 compiled, 0 warnings, 0.60s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.69s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.54s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.52s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.51s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.40s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.40s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.48s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.43s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_index\views.cljs:18:72
+; --------------------------------------------------------------------------------
+;   15 |         (map (fn [user] 
+;   16 |                [:div {
+;   17 |                       :key (:id user)
+;   18 |                       {:on-click #(re-frame/dispatch [::events/navigate :home])}
+; ------------------------------------------------------------------------------^-
+; routes_example/users_index/views.cljs [line 18, col 72] Invalid keyword: ::events/navigate.
+; 
+; --------------------------------------------------------------------------------
+;   19 |                       } 
+;   20 |                 (:name user)
+;   21 |                 ]
+;   22 |                ) 
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_index\views.cljs:18:72
+; --------------------------------------------------------------------------------
+;   15 |         (map (fn [user] 
+;   16 |                [:div {
+;   17 |                       :key (:id user)
+;   18 |                       {:on-click #(re-frame/dispatch [::events/navigate :home])
+; ------------------------------------------------------------------------------^-
+; routes_example/users_index/views.cljs [line 18, col 72] Invalid keyword: ::events/navigate.
+; 
+; --------------------------------------------------------------------------------
+;   19 |                       } 
+;   20 |                 (:name user)
+;   21 |                 ]
+;   22 |                ) 
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_index\views.cljs:18:71
+; --------------------------------------------------------------------------------
+;   15 |         (map (fn [user] 
+;   16 |                [:div {
+;   17 |                       :key (:id user)
+;   18 |                       :on-click #(re-frame/dispatch [::events/navigate :home])
+; -----------------------------------------------------------------------------^--
+; routes_example/users_index/views.cljs [line 18, col 71] Invalid keyword: ::events/navigate.
+; 
+; --------------------------------------------------------------------------------
+;   19 |                       } 
+;   20 |                 (:name user)
+;   21 |                 ]
+;   22 |                ) 
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_index\views.cljs:19:71
+; --------------------------------------------------------------------------------
+;   16 |         (map (fn [user] 
+;   17 |                [:div {
+;   18 |                       :key (:id user)
+;   19 |                       :on-click #(re-frame/dispatch [::events/navigate :home])
+; -----------------------------------------------------------------------------^--
+; routes_example/users_index/views.cljs [line 19, col 71] Invalid keyword: ::events/navigate.
+; 
+; --------------------------------------------------------------------------------
+;   20 |                       } 
+;   21 |                 (:name user)
+;   22 |                 ]
+;   23 |                ) 
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; The required namespace "routes" is not available, it was required by "routes_example/users_index/views.cljs".
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_index\views.cljs:19:71
+; --------------------------------------------------------------------------------
+;   16 |         (map (fn [user] 
+;   17 |                [:div {
+;   18 |                       :key (:id user)
+;   19 |                       :on-click #(re-frame/dispatch [::events/navigate :home])
+; -----------------------------------------------------------------------------^--
+; routes_example/users_index/views.cljs [line 19, col 71] Invalid keyword: ::events/navigate.
+; 
+; --------------------------------------------------------------------------------
+;   20 |                       } 
+;   21 |                 (:name user)
+;   22 |                 ]
+;   23 |                ) 
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 1 compiled, 0 warnings, 0.39s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.55s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 1 warnings, 0.90s)
+; 
+; 
+; 
+; ------ WARNING #1 - :undeclared-var --------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:55:2
+; 
+; --------------------------------------------------------------------------------
+; 
+;   52 |   [handler]
+;   53 |   (pushy/set-token! history (url-for handler)))
+;   54 | 
+; 
+;   55 | (aply )
+; 
+; --------^-----------------------------------------------------------------------
+; 
+;  Use of undeclared Var routes-example.routes/aply
+; 
+; --------------------------------------------------------------------------------
+; 
+;   56 | 
+;   57 | (defn start!
+;   58 |   []
+;   59 |   (pushy/start! history))
+; 
+; --------------------------------------------------------------------------------
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 1 warnings, 0.45s)
+; 
+; 
+; 
+; ------ WARNING #1 - :undeclared-var --------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:55:2
+; 
+; --------------------------------------------------------------------------------
+; 
+;   52 |   [handler]
+;   53 |   (pushy/set-token! history (url-for handler)))
+;   54 | 
+; 
+;   55 | (aply url-for )
+; 
+; --------^-----------------------------------------------------------------------
+; 
+;  Use of undeclared Var routes-example.routes/aply
+; 
+; --------------------------------------------------------------------------------
+; 
+;   56 | 
+;   57 | (defn start!
+;   58 |   []
+;   59 |   (pushy/start! history))
+; 
+; --------------------------------------------------------------------------------
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 1 warnings, 0.64s)
+; 
+; 
+; 
+; ------ WARNING #1 - :undeclared-var --------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:55:2
+; 
+; --------------------------------------------------------------------------------
+; 
+;   52 |   [handler]
+;   53 |   (pushy/set-token! history (url-for handler)))
+;   54 | 
+; 
+;   55 | (aply url-for [])
+; 
+; --------^-----------------------------------------------------------------------
+; 
+;  Use of undeclared Var routes-example.routes/aply
+; 
+; --------------------------------------------------------------------------------
+; 
+;   56 | 
+;   57 | (defn start!
+;   58 |   []
+;   59 |   (pushy/start! history))
+; 
+; --------------------------------------------------------------------------------
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:66:1
+; routes_example/routes.cljs [line 66, col 1] Unexpected EOF while reading item 2 of vector, starting at line 55 and column 15.
+; 
+; --------------------------------------------------------------------------------
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:66:1
+; routes_example/routes.cljs [line 66, col 1] Unexpected EOF while reading item 2 of vector, starting at line 55 and column 15.
+; 
+; --------------------------------------------------------------------------------
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:66:1
+; routes_example/routes.cljs [line 66, col 1] Unexpected EOF while reading item 2 of vector, starting at line 55 and column 15.
+; 
+; --------------------------------------------------------------------------------
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:66:1
+; routes_example/routes.cljs [line 66, col 1] Unexpected EOF while reading item 2 of vector, starting at line 55 and column 16.
+; 
+; --------------------------------------------------------------------------------
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 1 compiled, 1 warnings, 0.32s)
+; 
+; 
+; 
+; ------ WARNING #1 - :undeclared-var --------------------------------------------
+; 
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\routes.cljs:55:17
+; 
+; --------------------------------------------------------------------------------
+; 
+;   52 |   [handler]
+;   53 |   (pushy/set-token! history (url-for handler)))
+;   54 | 
+; 
+;   55 | (apply url-for [user-view :id 10])
+; 
+; -----------------------^--------------------------------------------------------
+; 
+;  Use of undeclared Var routes-example.routes/user-view
+; 
+; --------------------------------------------------------------------------------
+; 
+;   56 | 
+;   57 | (defn start!
+;   58 |   []
+;   59 |   (pushy/start! history))
+; 
+; --------------------------------------------------------------------------------
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.56s)
+"/users/10"
+cljs꞉routes-example.routes꞉> 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.48s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 5 compiled, 0 warnings, 0.54s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\views.cljs:32:66
+; --------------------------------------------------------------------------------
+;   29 |    [:h1 "This is the About Page."]
+;   30 | 
+;   31 |    [:div
+;   32 |     [:a {:on-click #(re-frame/dispatch [::events/navigate {:home}])}
+; ------------------------------------------------------------------------^-------
+; routes_example/views.cljs [line 32, col 66] The map literal starting with :home on line 32 column 59 contains 1 form(s). Map literals must contain an even number of forms.
+; 
+; --------------------------------------------------------------------------------
+;   33 |      "go to Home Page"]]])
+;   34 | 
+;   35 | (defmethod routes/panels :about-panel [] [about-panel])
+;   36 | 
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 1 compiled, 0 warnings, 0.31s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.55s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.41s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.37s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_index\views.cljs:20:24
+; --------------------------------------------------------------------------------
+;   17 |                [:div {
+;   18 |                       :key (:id user)
+;   19 |                       :on-click #(re-frame/dispatch [::events/navigate [;]])
+;   20 |                       } 
+; ------------------------------^-------------------------------------------------
+; routes_example/users_index/views.cljs [line 20, col 24] Unmatched delimiter }.
+; 
+; --------------------------------------------------------------------------------
+;   21 |                 (:name user)
+;   22 |                 ]
+;   23 |                ) 
+;   24 |              users)
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 1 compiled, 0 warnings, 0.50s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build failure:
+; 
+; ------ ERROR -------------------------------------------------------------------
+;  File: C:\Users\nyemi\Documents\clojure\routing\routes-example\src\routes_example\users_index\views.cljs:19:74
+; --------------------------------------------------------------------------------
+;   16 |         (map (fn [user] 
+;   17 |                [:div {
+;   18 |                       :key (:id user)
+;   19 |                       :on-click #(re-frame/dispatch [::events/navigate [:]])
+; --------------------------------------------------------------------------------^
+; routes_example/users_index/views.cljs [line 19, col 74] Invalid keyword: :.
+; 
+; --------------------------------------------------------------------------------
+;   20 |                       } 
+;   21 |                 (:name user)
+;   22 |                 ]
+;   23 |                ) 
+; --------------------------------------------------------------------------------
+; 
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 1 compiled, 0 warnings, 0.38s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.40s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.75s)
+; 
+; [:app] Compiling ...
+; 
+; [:app] Build completed. (491 files, 2 compiled, 0 warnings, 0.39s)
+; nREPL connection failed: Error: read ECONNRESET
+; Failed connecting.
+; nREPL Connection was closed

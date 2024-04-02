@@ -1,0 +1,1 @@
+["^ ","~$user-view",["^ ","~:row",11,"~:col",1,"~:fixed-arities",["~#set",[0]],"~:name","^0","~:ns","~$routes-example.users-views.views","~:top-ns","^7","~:arities",["^ ","~i0",["^ ","~:ret","~:vector","~:arglist-str","[]"]],"~:type","~:fn"],"~:filename","C:\\Users\\nyemi\\Documents\\clojure\\routing\\routes-example\\src\\routes_example\\users_views\\views.cljs"]
